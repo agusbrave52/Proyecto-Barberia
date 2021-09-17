@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barberia Chinos</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="css/tcal.css">
+</head>
+<body>
+  <div class="container">
+    <!-- #region LINEA PRINCIPAL -->
+    <div class="row bg-dark.bg-gradient" id="lineaPrincipal">¿
+      <nav class="py-1 fixed-top" id="nave">
+        <div class="d-flex align-items-center justify-content-center" id="rama">
+          <img id="logo" src="img/Logo1.png" alt="">
+          <span class="text-light" id="infoPrincipal">🚪Horarios de atencion: <br> Lun a Sab de 9:30 a 20:00hs.</span>
+        </div>
+      </nav>
+      <!-- #region CAROUSEL PRINCIPAL --> 
+      <div id="carouselExampleIndicators" class="carousel slide carousel-fade pt-5" data-bs-ride="carousel">
+        <div class="carousel-indicators m-1">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1" id="slide0" style="
+            background-image: url('img/Corte1.png'); 
+            width: 40px;
+            height: 30px;
+            background-size: contain;
+            background-repeat: round;
+            opacity: 50%;">
+          </button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"
+            id="slide1" style="
+            background-image: url('img/Corte2.png');
+            width: 40px;
+            height: 30px;
+            background-size: contain;
+            background-repeat: round;
+            opacity: 50%;">
+          </button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"
+            id="slide2" style="
+            background-image: url('img/Corte3.png');
+            width: 40px;
+            height: 30px;
+            background-size: contain;
+            background-repeat: round;
+            opacity: 50%;">
+          </button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active " style="background-image: url('img/Corte1.png')">
+          </div>
+          <div class="carousel-item" style="background-image: url('img/Corte2.png')">
+          </div>
+          <div class="carousel-item" style="background-image: url('img/Corte3.png')">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="bi bi-arrow-left-circle-fill" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="bi bi-arrow-right-circle-fill" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- endregion -->
+    </div>
+    <!-- endregion -->
+    <div class="row text-center d-flex align-content-center bg-dark" style="height: 100px;">
+      <div class="col">
+        <a style="font-weight: bold;" id="cortes" class="nav-link text-white" href="#listado"
+          onclick="clickCortes()">💇‍♂️CORTES</a>
+      </div>
+      <div class="vr"></div>
+      <div class="col">
+        <a style="font-weight: bold;" id="sorteos" class="nav-link text-white" href="#listSorteos"
+          onclick="clickSorteos()">📰NOTICIAS Y SORTEOS</a>
+      </div>
+      <div class="vr"></div>
+      <div class="col ">
+        <a style="font-weight: bold;" id="horarios" class="nav-link text-white" href="#listReservar"
+          onclick="clickReservar()">🗒RESERVAR</a>
+      </div>
+    </div>
+    <!-- #region Pestañas -->
+    <div class="row justify-content-center" id="listadoS">
+      <!-- #region Precios --> 
+      <div class="row justify-content-center" id="listado">
+        <div class="row text-center pt-4">
+          <strong >Listado de Precios</strong>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-3 pt-4">
+            <ul>
+              <li>Corte:</li>
+              <li>Afeitadora:</li>
+              <li>Corte y Barba:</li>
+              <li>Barba:</li>
+              <li>Cejas:</li>
+              <li>Fichas Metegol x2:</li>
+              <li>Ficha Pool(Proximamente)</li>
+              <li>Ficha Arcade x2</li>
+            </ul>
+          </div>
+          <div class="col-1 text-left pt-4">
+            <ul>
+              <li>$400</li>
+              <li>$450</li>
+              <li>$550</li>
+              <li>$200</li>
+              <li>$50</li>
+              <li>$50</li>
+              <li>$100</li>
+              <li>$10</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- endregion -->
+      <!-- #region Noticias y Sorteos --> 
+      <div class="row justify-content-center" id="listSorteos">
+        <div class="row text-center pt-4">
+          <strong >Noticias y Sorteos</strong>
+        </div>
+        <div class="row justify-content-center">
+          <div id="carousel2" class="carousel slide carousel-fade pt-5" data-bs-ride="carousel">
+            <div class="carousel-indicators m-1">
+              <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class=""
+                aria-current="true" aria-label="Slide 1" id="slide0" style="
+                background-image: url('img/photo1631758920.jpeg'); 
+                width: 40px;
+                height: 30px;
+                background-size: contain;
+                background-repeat: round;
+                opacity: 50%;">
+              </button>
+              <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1" class="active"
+                aria-current="true" aria-label="Slide 2" id="slide1" style="
+                background-image: url('img/Noticia1.png'); 
+                width: 40px;
+                height: 30px;
+                background-size: contain;
+                background-repeat: round;
+                opacity: 50%;">
+              </button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active " style="background-image: url('img/photo1631758920.jpeg')">
+              </div>
+              <div class="carousel-item " style="background-image: url('img/Noticia1.png')">
+              </div>
+            </div>
+            <button class="carousel-control-prev caro2" type="button" data-bs-target="#carousel2"
+              data-bs-slide="prev">
+              <span class="bi bi-arrow-left-circle-fill" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next caro2" type="button" data-bs-target="#carousel2"
+              data-bs-slide="next">
+              <span class="bi bi-arrow-right-circle-fill" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- endregion -->
+      <!-- #region Reservar --> 
+      <div class="row justify-content-center" id="listReservar">
+        <div class="row text-center pt-4">
+          <strong >Reservas Disponibles</strong>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-3 text-center">
+            <input type="text" name="date" class="tcal" value="" />
+          </div>
+        </div>
+      </div>
+      <!-- endregion -->
+    <!-- endregion -->
+    </div>
+  </div>
+</body>
+
+</html>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script type="text/javascript" src="js/tcal.js"></script> 
+
